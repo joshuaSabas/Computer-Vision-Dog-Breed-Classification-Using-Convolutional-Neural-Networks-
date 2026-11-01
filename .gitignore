@@ -1,0 +1,33 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+Thumbs.db
+
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Android/IntelliJ related
+*.iml
+.idea/
+.gradle/
+/local.properties
+/.android/
+/.ios/
+
+# VS Code related
+.vscode/
+
+# Generated files
+*.freezed.dart
+*.g.dart
+
+# Keep model folder but ignore large model files
+assets/models/*
+!assets/models/.gitkeep
