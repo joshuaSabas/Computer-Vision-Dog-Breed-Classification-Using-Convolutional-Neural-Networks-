@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image/image.dart' as img;
 import 'classifier_service.dart';
@@ -39,10 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
           _isLoading = true;
         });
 
-        // I-convert ang image at ipasa sa AI
         final imageBytes = await _selectedImage!.readAsBytes();
         final image = img.decodeImage(imageBytes);
-        // Siguraduhing 160x160 kung yan ang ginamit mong size sa training
         final resized = img.copyResize(image!, width: 160, height: 160);
 
         final result = await _classifier.classify(resized);
@@ -103,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               'Capture or select\na dog photo',
                               textAlign: TextAlign.center,
-                              style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey[600]),
+                              style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                             ),
                           ],
                         ),
@@ -119,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             const CircularProgressIndicator(color: Color(0xFF0056D2)),
                             const SizedBox(height: 12),
-                            Text('Analyzing...', style: GoogleFonts.poppins(color: Colors.grey[600])),
+                            Text('Analyzing...', style: TextStyle(color: Colors.grey[600])),
                           ],
                         )
                       : _predictedBreed != null
@@ -135,13 +132,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   Text(
                                     _predictedBreed!,
-                                    style: GoogleFonts.poppins(fontSize: 22, fontWeight: FontWeight.bold, color: const Color(0xFF0056D2)),
+                                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Color(0xFF0056D2)),
                                     textAlign: TextAlign.center,
                                   ),
                                   const SizedBox(height: 4),
                                   Text(
                                     '${(_confidence! * 100).toStringAsFixed(1)}% Match',
-                                    style: GoogleFonts.poppins(fontSize: 14, color: Colors.grey[700]),
+                                    style: TextStyle(fontSize: 14, color: Colors.grey[700]),
                                   ),
                                 ],
                               ),
@@ -178,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Icon(icon, size: 22),
           const SizedBox(width: 8),
-          Text(label, style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w500)),
+          Text(label, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
         ],
       ),
     );
