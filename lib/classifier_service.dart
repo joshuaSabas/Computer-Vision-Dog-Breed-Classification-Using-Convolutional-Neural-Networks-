@@ -26,10 +26,7 @@ class ClassifierService {
     if (!_isLoaded || _interpreter == null || _labels == null) return null;
 
     try {
-      // I-convert ang image sa Tensor (dapat tugma sa training size mo)
       final input = List.generate(1, (i) => List.generate(160, (j) => List.generate(160, (k) => List.generate(3, (l) => image.getPixel(j, k)[l] / 255.0))));
-      
-      // Output size base sa bilang ng classes mo (118)
       final output = List.filled(118, 0.0).reshape([1, 118]);
 
       _interpreter!.run(input, output);
