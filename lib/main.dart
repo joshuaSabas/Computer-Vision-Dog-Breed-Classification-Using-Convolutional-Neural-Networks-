@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'splash_screen.dart';
 
 void main() {
@@ -19,17 +18,17 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xFF0056D2),
           secondary: const Color(0xFF00A3FF),
         ),
-        textTheme: GoogleFonts.poppinsTextTheme(),
-        appBarTheme: AppBarTheme(
-          backgroundColor: const Color(0xFFF8F9FA),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFF8F9FA),
           elevation: 0,
           centerTitle: true,
-          titleTextStyle: GoogleFonts.poppins(
+          titleTextStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w600,
-            color: const Color(0xFF0056D2),
+            color: Color(0xFF0056D2),
+            fontFamily: 'Roboto',
           ),
-          iconTheme: const IconThemeData(color: Color(0xFF0056D2)),
+          iconTheme: IconThemeData(color: Color(0xFF0056D2)),
         ),
       ),
       home: const SplashScreen(),
