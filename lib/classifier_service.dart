@@ -26,7 +26,27 @@ class ClassifierService {
     if (!_isLoaded || _interpreter == null || _labels == null) return null;
 
     try {
-      final input = List.generate(1, (i) => List.generate(160, (j) => List.generate(160, (k) => List.generate(3, (l) => image.getPixel(j, k)[l] / 255.0))));
+      // 1. I-FORCE ANG RGB (3 CHANNELS)
+      final img.Image rgbImage = image.convert(numChannels: 3); 
+      
+      // 2. I-RESIZE SA 224x224 (DATING 160)
+      final img.Image resized = img.copyResize(rgbImage, width: 224, height: 224);
+
+      // 3. GAWING TENSOR (224 NA, HINDI 160)
+      final input = List.generate(
+        1, 
+        (i) => List.generate(
+          224, 
+          (j) => List.generate(
+            224, 
+            (k) => List.generate(
+              3, 
+              (l) => resized.getPixel(j, k)[l] / 255.0
+            )
+          )
+        )
+      );
+      
       final output = List.filled(118, 0.0).reshape([1, 118]);
 
       _interpreter!.run(input, output);
