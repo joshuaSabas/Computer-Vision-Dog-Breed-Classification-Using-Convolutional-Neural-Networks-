@@ -22,8 +22,10 @@ android {
         applicationId = "com.example.dog_breed_classifier"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        // Flutter 3.16.0 does not expose these values on the Flutter Gradle extension.
+        // Keep these aligned with the package version in pubspec.yaml (1.0.0+1).
+        versionCode = 1
+        versionName = "1.0.0"
     }
 
     buildTypes {
