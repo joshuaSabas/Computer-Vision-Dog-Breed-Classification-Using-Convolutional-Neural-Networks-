@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _classifier.loadModel();
   }
 
-  Future<void> _pickImage(ImageSource source) async {
+    Future<void> _pickImage(ImageSource source) async {
     try {
       final picker = ImagePicker();
       final pickedFile = await picker.pickImage(source: source);
@@ -40,9 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
         final imageBytes = await _selectedImage!.readAsBytes();
         final image = img.decodeImage(imageBytes);
-        final resized = img.copyResize(image!, width: 160, height: 160);
-
-        final result = await _classifier.classify(resized);
+        
+        // WALANG RESIZE DITO, DERETSO SA CLASSIFIER
+        final result = await _classifier.classify(image!);
 
         setState(() {
           if (result != null) {
