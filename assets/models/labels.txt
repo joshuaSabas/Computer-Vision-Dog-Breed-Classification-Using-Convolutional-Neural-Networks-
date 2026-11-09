@@ -77,7 +77,6 @@ briard
 kelpie
 komondor
 Old English sheepdog
-Shetland sheepdog
 collie
 Border collie
 Bouvier des Flandres
@@ -92,13 +91,11 @@ EntleBucher
 boxer
 bull mastiff
 Tibetan mastiff
-French bulldog
 Great Dane
 Saint Bernard
 Eskimo dog
 malamute
 Siberian husky
-dalmatian
 affenpinscher
 basenji
 pug
@@ -116,10 +113,6 @@ toy poodle
 miniature poodle
 standard poodle
 Mexican hairless
-timber wolf
-white wolf
-red wolf
-coyote
 dingo
 dhole
 African hunting dog
