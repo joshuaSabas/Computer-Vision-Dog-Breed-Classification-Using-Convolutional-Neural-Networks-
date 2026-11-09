@@ -2,7 +2,7 @@ Chihuahua
 Japanese spaniel
 Maltese dog
 Pekinese
-Shih-Tzu
+Tzu
 Blenheim spaniel
 papillon
 toy terrier
@@ -12,7 +12,7 @@ basset
 beagle
 bloodhound
 bluetick
-black-and-tan coonhound
+tan coonhound
 Walker hound
 English foxhound
 redbone
@@ -35,7 +35,7 @@ Irish terrier
 Norfolk terrier
 Norwich terrier
 Yorkshire terrier
-wire-haired fox terrier
+haired fox terrier
 Lakeland terrier
 Sealyham terrier
 Airedale
@@ -49,15 +49,15 @@ standard schnauzer
 Scotch terrier
 Tibetan terrier
 silky terrier
-soft-coated wheaten terrier
+coated wheaten terrier
 West Highland white terrier
 Lhasa
-flat-coated retriever
-curly-coated retriever
+coated retriever
+coated retriever
 golden retriever
 Labrador retriever
 Chesapeake Bay retriever
-German short-haired pointer
+haired pointer
 vizsla
 English setter
 Irish setter
